@@ -2,26 +2,10 @@
 
 <h1>Listing Presidents</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @presidents.each do |president| %>
-      <tr>
-        <td><%= president.name %></td>
-        <td><%= link_to 'Show', president %></td>
-        <td><%= link_to 'Edit', edit_president_path(president) %></td>
-        <td><%= link_to 'Destroy', president, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New President', new_president_path %>
+<president-list>
+  <ul as-sortable="dragControlListeners" ng-model="presidents">
+    <li ng-repeat="president in presidents" as-sortable-item>
+      <div as-sortable-item-handle>{{ president }}</div>
+    </li>
+  </ul>
+</president-list>
