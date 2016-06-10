@@ -12,7 +12,7 @@
 //
 
 require('angular')
-require('ng-sortable')
+require('angular-sortable-view')
 require('app')
 
 //= require jquery

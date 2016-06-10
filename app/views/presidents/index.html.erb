@@ -3,9 +3,9 @@
 <h1>Listing Presidents</h1>
 
 <president-list>
-  <ul as-sortable="dragControlListeners" ng-model="presidents">
-    <li ng-repeat="president in presidents" as-sortable-item>
-      <div as-sortable-item-handle>{{ president }}</div>
+  <ul sv-root sv-part="presidents">
+    <li ng-repeat="president in presidents" sv-element>
+      <div>{{ president  }}</div>
     </li>
   </ul>
 </president-list>
